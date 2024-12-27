@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Enhancement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .upload-form {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .filter-select {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>  
+    <div class="upload-form">
+        <h1>Image Enhancement Application</h1>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*"><br><br>
+            
+            <div class="filter-select">
+                <label for="filter_type">Choose a filter:</label>
+                <select name="filter_type" id="filter_type">
+                    <option value="sharpen">Sharpen Filter</option>
+                    <option value="gaussian">Gaussian Filter</option>
+                    <option value="median">Median Filter</option>
+                    <option value="sharpen_median">Sharpen + Median Filters</option>
+                </select>
+            </div>
+            
+            <input type="submit" value="Process Image">
+        </form>
+    </div>
+</body>
+</html>

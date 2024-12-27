@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İşlenmiş Görüntü</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            max-width: 500px;
+            height: auto;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="images">
+        <div class="image-container">
+            <h2>Original Image</h2>
+            <img src="{{ url_for('static', filename='uploads/' + original) }}" alt="Orijinal">
+        </div>
+        <div class="image-container">
+            <h2>Filtered Image</h2>
+            <img src="{{ url_for('static', filename='uploads/' + enhanced) }}" alt="İyileştirilmiş">
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="{{ url_for('upload_file') }}">Upload New Image</a>
+    </div>
+</body>
+</html>
